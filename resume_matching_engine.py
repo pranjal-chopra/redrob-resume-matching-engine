@@ -1,32 +1,3 @@
-"""
-=============================================================
-  Redrob AI Campus Hackathon — Resume Matching Engine
-  Candidate  : Pranjal Chopra
-  University : Maharaja Agrasen Institute of Technology (MAIT, GGSIPU)
-  Language   : Python 3  |  Libraries: math (standard only)
-=============================================================
-
-Redrob AI Usage Summary (staged prompts):
-  Stage 1 — Normalization logic
-      Prompt: "Given a comma-separated raw skill string, write a Python
-               function that lowercases tokens, matches multi-word phrases
-               before single tokens against a SKILL_ALIASES dict, and
-               discards anything not in the map."
-  Stage 2 — Deduplication & vocabulary
-      Prompt: "After normalization, remove duplicates per resume while
-               preserving order, then build a sorted shared vocabulary
-               across all 10 resumes."
-  Stage 3 — TF-IDF construction (no external libraries)
-      Prompt: "Using only the math module, implement TF = 1/N and
-               IDF = ln(10 / df(skill)) as specified, then compute
-               TF-IDF vectors for each resume over the shared vocab."
-  Stage 4 — JD binary vectors + cosine similarity
-      Prompt: "Build binary JD vectors over the same vocab, then compute
-               cosine similarity = dot(A,B) / (|A| * |B|) and rank the
-               top-3 candidates per JD, breaking ties alphabetically."
-=============================================================
-"""
-
 import math
 
 
